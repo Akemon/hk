@@ -1,0 +1,44 @@
+.wrap{
+    width: 900px;
+    height: 600px;
+    margin:0 auto;
+    padding:2px;
+    background:grey;
+}
+.wrap>div{
+    float:left;
+    background:white;
+    height: 100%;
+    text-align: center;
+}
+.wrap .left,
+.wrap .right{
+    width: 200px;
+
+}
+.wrap .content{
+    width: 496px;
+    margin :0 2px;
+}
+.wrap .content .game{
+    margin:auto;
+    width: 400px;
+    height: 400px;
+    /*box-shadow: 0 0 2px 2px black;*/
+}
+.wrap .content .game img{
+    width:196px;
+    height: 196px;
+}
+.wrap .content .game div{
+    float:left;
+    width:196px;
+    height: 196px;
+    margin :2px;
+    background:grey;
+    /*box-shadow: 0 0 2px 2px grey;*/
+
+}
+.wrap .content .game .special{
+    background:red;
+}

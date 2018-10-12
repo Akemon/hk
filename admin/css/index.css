@@ -1,0 +1,17 @@
+.wrap {
+    min-height: 600px;
+    max-width:1000px;
+}
+.wrap .left {
+    float:left;
+    height: 100%;
+}
+.wrap .left{
+    width: 200px;
+    /*background:grey;*/
+}
+.wrap .content{
+    height: 100%;
+    margin-left: 220px;
+    /*background:bisque;*/
+}

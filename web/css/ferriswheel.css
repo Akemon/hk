@@ -1,0 +1,143 @@
+body{
+    background:url("../img/mo/2.jpg") no-repeat;
+}
+.wrap{
+    width: 1090px;
+    height: 897px;
+    position:relative;
+    margin:0 auto;
+}
+.wrap .plank1{
+    position:absolute;
+    top:358px;
+    left:420px;
+    width: 247px;
+    height: 505px;
+    margin:0 auto;
+    background:url("../img/mo/bracketsmall.png");
+}
+.wrap .wheel{
+    position: relative;
+    width: 768px;
+    height: 768px;
+    margin:0 auto;
+    background: url("../img/mo/fsw.png");
+    animation:wheel 13s linear 0s infinite;
+}
+.wrap .plank2{
+    position:absolute;
+    top: 370px;
+    left:360px;
+    width: 358px;
+    height: 529px;
+    background:url("../img/mo/bracket.png");
+}
+.wrap .title{
+    position:absolute;
+    left:260px;
+    top:270px;
+    width: 577px;
+    height: 257px;
+    /*margin:0 auto;*/
+    background:url("../img/mo/big-title.png");
+}
+.wrap .logo{
+    position:absolute;
+    top:484px;
+    left:356px;
+    width: 413px;
+    height: 139px;
+    background:url("../img/mo/title.png");
+}
+.wrap .arrow{
+    position:absolute;
+    top:568px;
+    left:518px;
+    width: 48px;
+    height: 64px;
+    background:url("../img/mo/arrow.png");
+}
+.wrap .wheel .people{
+    animation: people 13s linear 0s infinite;
+    transform-origin: center top;
+}
+.wrap .wheel .people:nth-child(1){
+    position: absolute;
+    top:100px;
+    left:100px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(2){
+    position: absolute;
+    top:364px;
+    left:-20px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(3){
+    position: absolute;
+    top:16px;
+    left:320px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(4){
+    position: absolute;
+    top:634px;
+    left:564px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(5){
+    position: absolute;
+    top:614px;
+    left:50px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(6){
+    position: absolute;
+    top:690px;
+    left:320px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(7){
+    position: absolute;
+    top:100px;
+    left:570px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+.wrap .wheel .people:nth-child(8){
+    position: absolute;
+    top:364px;
+    left:660px;
+    width:130px;
+    height: 170px;
+    background:url("../img/mo/boy.png");
+}
+@keyframes wheel {
+    0%{
+        transform:rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(360deg);
+    }
+}
+@keyframes people {
+    0%{
+        transform:rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(-360deg);
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            background: url("../images/form_bac.jpg") center center no-repeat;
+            background-size: cover;
+            font-family: "Source Sans Pro";
+        }
+        .blank {
+            height: 50%;
+            margin-bottom: -150px;
+        }
+        .wrap {
+            max-width: 600px;
+            min-width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: "Source Sans Pro";
+        }
+        .wrap h1 {
+            color: white;
+            font-size: 40px;
+            font-weight: 200;
+            font-family: "Source Sans Pro";
+        }
+        .form {
+            padding: 20px 0;
+        }
+        .form input::-webkit-input-placeholder {
+            color: white;
+        }
+        .form input[type="email"],
+        .form input[type="password"],
+        .form input[type="text"]
+        {
+            display: block;
+            outline: none;
+            width: 250px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin: 0 auto 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            font-family: "Source Sans Pro";
+        }
+        .form input[type="email"]:hover,
+        .form input[type="password"]:hover,
+        .form input[type="text"]:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: white;
+        }
+        .form input[type="email"]:focus,
+        .form input[type="password"]:focus,
+        .form input[type="text"]:focus {
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #53e3a6;
+        }
+        .form input[type="email"]:focus::-webkit-input-placeholder,
+        .form input[type="password"]:focus::-webkit-input-placeholder ,
+        .form input[type="text"]:focus::-webkit-input-placeholder{
+            color: #53e3a6;
+        }
+        .form input[type="submit"] {
+            outline: none;
+            background-color: white;
+            border: none;
+            padding: 10px 15px;
+            color: #53e3a6;
+            border-radius: 3px;
+            width: 250px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .form input[type="submit"]:hover {
+            background-color: #f0f0f0;
+        }
+        .form input[type="submit"]:active {
+            background-color: #60b3b2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="blank"></div>
+<div class="wrap">
+    <h1>Welcome</h1>
+    <form action="" class="form">
+        <div>
+            <input type="email" class="account" placeholder="邮箱" name="account">
+            <input type="text" class="nickname" placeholder="用户昵称" name="nickname">
+            <input type="password" class="pwd" placeholder="密码" name="pwd">
+            <input type="password" class="repeatpwd" placeholder="重复密码" name="repeatpwd">
+            <input type="submit" value="注册" class="submitBtn">
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    $(function () {
+        $(".submitBtn").click(function () {
+            // alert("");
+            var account =$(".account").val();
+            var nickname = $(".nickname").val();
+            var pwd =$(".pwd").val();
+            var repeatpwd = $(".repeatpwd").val();
+            if(pwd!= repeatpwd) {
+                alert("重复密码都输入错误，你怕是个猪吧");
+                return ;
+            }
+            // console.log(account);
+            $.post("../server/doRegister.php",
+                {'account':account,'nickname':nickname,'pwd':pwd},
+                function (data) {
+                    console.log(data);
+                    if(data.code==1){
+                        alert("注册成功");
+                        window.location.href  ='login.html';
+                    }else{
+                        alert(data.message);
+                    }
+
+                }
+            );
+            return false;
+        });
+    });
+
+</script>
+
+</html>

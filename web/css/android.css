@@ -1,0 +1,135 @@
+body{
+   margin-top: 100px;
+}
+div{
+    transition:all 1s linear;
+}
+.wrap{
+    width:300px;
+    height: 400px;
+    margin:0 auto;
+    /*border:1px solid red;*/
+}
+.wrap .head{
+    position:relative;
+    width:150px;
+    height: 75px;
+    background-color:green;
+    border-radius:75px 75px 0 0;
+    margin:0 auto;
+    transform-origin: right bottom;
+}
+.wrap .head:hover{
+    transform:rotateZ(45deg);
+}
+.wrap .head .line{
+    position:absolute;
+    left:15px;
+    top:-15px;
+    width: 120px;
+    height: 50px;
+    /*background-color:red;*/
+}
+.wrap .head .line>div{
+    width: 10px;
+    height: 100%;
+    border-radius:5px 5px 0 0 ;
+    background-color:green;
+}
+.wrap .head .line>div:nth-child(1){
+    float:left;
+}
+.wrap .head .line>div:nth-child(2){
+    float:right;
+}
+.wrap .head .eyes{
+    width: 100px;
+    height: 20px;
+    margin:0 auto;
+    /*background-color:red;*/
+    position:absolute;
+    top:34px;
+    left:24px;
+}
+.wrap .head .eyes>div{
+    width: 20px;
+    height: 20px;
+    border-radius:100%;
+    background-color:white;
+}
+.wrap .head .eyes>div:nth-child(1){
+    float:left;
+}
+.wrap .head .eyes>div:nth-child(2){
+    float:right;
+}
+.wrap .body{
+    height:150px;
+    /*background:green;*/
+    margin-top:10px;
+    /*margin-bottom:10px;*/
+    padding-left:20px;
+    padding-right:20px;
+}
+.wrap .arm{
+    width: 45px;
+    height: 120px;
+    border-radius:30px;
+    background-color:green;
+    transform-origin:50% 30px;
+}
+.wrap .left-arm{
+    float:left;
+}
+.wrap .left-arm:hover{
+    transform: rotateZ(90deg);
+}
+.wrap .right-arm{
+    float:right;
+}
+.wrap .right-arm:hover{
+    transform: rotateZ(-90deg);
+}
+.wrap .belly{
+    width: 150px;
+    height:100%;
+    border-radius:0 0 15px 15px;
+    margin:0 auto;
+    background-color:green;
+
+}
+.wrap .legs{
+    width:130px;
+    height: 75px;
+    /*background-color:green;*/
+    margin:0 auto;
+}
+.wrap .legs div{
+    width:45px;
+    height: 100px;
+    border-radius:0 0 30px 30px;
+    background-color:green;
+}
+.wrap .legs div:nth-child(1){
+    float:left;
+    margin-left:10px;
+}
+.wrap .legs div:nth-child(2){
+    float:right;
+    margin-right:10px;
+}
+
+.wrap{
+    animation: rotate 2s linear 0s infinite;
+}
+@keyframes rotate {
+    0%{
+        transform:rotateY(0deg) scale(1);
+    }
+    50%{
+        transform:rotateY(180deg) scale(2);
+    }
+    100%{
+        transform:rotateY(360deg) scale(3);
+    }
+}
